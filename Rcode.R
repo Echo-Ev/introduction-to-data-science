@@ -96,7 +96,7 @@ top_genre_by_decade <- genre_by_decade %>%
 
 ggplot(top_genre_by_decade, aes(x = decade, y = AverageRating, fill = genres)) +
   geom_col() +  # Use a bar chart to display.
-  geom_text(aes(label = genres), angle = 90, hjust = 0,vjust = ifelse(top_genre_by_decade$decade == "1970" & top_genre_by_decade$genres == "Reality-TV", -0.5, 0.5)) +  # 添加文本标签显示最高评分的类型
+  geom_text(aes(label = genres), angle = 90, hjust = 0,vjust = ifelse(top_genre_by_decade$decade == "1970" & top_genre_by_decade$genres == "Reality-TV", -0.5, 0.5)) +  # Add a text label to display the highest-rated category.
   labs(title = "Highest Average Rated Movie Genre by Decade",
        x = "Decade",
        y = "Average Rating") +

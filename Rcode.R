@@ -77,7 +77,7 @@ View(most_popular_each_decade)
 #visualization
 ggplot(most_popular_each_decade, aes(x = decade, y = totalVotes, fill = genres)) +
   geom_bar(stat = "identity", position = "dodge") +
-  geom_text(aes(label = genres), angle = 90, vjust = 0.5, hjust = 0) +  # 添加文本标签
+  geom_text(aes(label = genres), angle = 90, vjust = 0.5, hjust = 0) +  
   labs(title = "Most Popular Movie Genres by Decade", x = "Decade", y = "total votes")
 
 
